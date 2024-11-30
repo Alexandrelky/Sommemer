@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Sora", sans-serif;
+    text-decoration: none;
+}
+body{
+    background-color: #050505;
+}
+header{
+    width: 100%;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.041);
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+header nav ul{
+    list-style-type: none;
+    display: flex;
+}
+header nav ul li{
+    padding: 0 10px 0 10px;
+}
+header nav ul li a{
+    color: rgb(250, 253, 255);
+}
+header .header-action a{
+    color: rgb(250, 253, 255);
+    padding: 0 10px;
+}
+#hero{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../images/backgrounds/bg-hero.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid transparent; /* A borda base */
+    border-image: linear-gradient(to right, transparent, #FF2146 50%, transparent) 1;
+}
+#hero .aside{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 8%;
+    gap: 40px;
+
+}
+#hero .aside .logo{
+    margin-left: -2.5%;
+}
+#hero .aside .texts h1{
+    font-size: 2.5vw;
+    color: rgb(250, 253, 255);
+}
+#hero .aside .texts h1 span{
+    color: #FF2146;
+}
+#hero .aside .texts p{
+    font-size: 1.3vw;
+    font-weight: 100;
+    max-width: 80%;
+    color: rgb(250, 253, 255);
+}
+#hero .aside #CtaButton a{
+    background: rgba(255, 255, 255, 0.082);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    font-weight: 600;
+    padding: 10px;
+    color: rgb(250, 253, 255);
+}
+
+
+
+/* 
+#testante{
+    width: 25%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+#gallery-drinks {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha, se necessário */
+    gap: 16px; /* Espaço entre os itens */
+    justify-content: center; /* Centraliza os itens no contêiner */
+}
+
+.drink-box {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos dentro da caixa */
+    align-items: center; /* Centraliza os elementos dentro da caixa */
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 200px; /* Define uma largura fixa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.drink-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.drink-box span {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.drink-box input[type="radio"] {
+    margin-bottom: 8px;
+}
+
+/* Daqui pra baixo é do Ticker */
+
+.ticker-wrapper {
+    opacity: .7;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    padding: 0 10% 0 10%;
+}
+.ticker {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.ticker-content {
+    display: flex;
+    width: max-content; 
+    animation: slide 30s linear infinite;
+}
+.ticker-content img {
+    height: 100%; 
+    flex-shrink: 0; 
+}
+.ticker-gradient {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100px;
+    pointer-events: none;
+    z-index: 1;
+}
+.ticker-gradient-left {
+    left: 10%;
+    background: linear-gradient(to right, rgb(5, 5, 5), rgba(5, 5, 5, 0));
+}
+.ticker-gradient-right {
+    right: 10%;
+    background: linear-gradient(to left, rgb(5, 5, 5), rgba(5, 5, 5, 0));
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-50%); 
+    }
+}
+
+/* Fim do Ticker */
+
+#catalog{
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+}
+#catalog .header-catalog{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#catalog .header-catalog img:first-child{
+    width: 1vw;
+}
+#catalog .header-catalog img:last-child{
+    width: 18vw;
+}
+#catalog .highlight-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    padding-left: 8%;
+    gap: 10px
+    ;
+}
+#catalog .highlight-title h1{
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+
+#about{
+    margin-top: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#about .about-title h1{
+    color: whitesmoke;
+    font-size: 3em;
+    text-align: center;
+}
+#about .about-title span{
+    color: #FF2146;
+}
+#about .card-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+}
+#about .card-box .card-text{
+    width: 40%;
+    padding: 5%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba(255, 255, 255, 0.148);
+}
+#about .card-box h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+    font-size: 2em;
+}

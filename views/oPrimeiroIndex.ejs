@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Banco de Dados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informações do Banco de Dados</h1>
+
+    <h2>Usuários</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Endereço</th>
+                <th>Senha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% usuarios.forEach(usuario => { %>
+                <tr>
+                    <td><%= usuario.id_usuario %></td>
+                    <td><%= usuario.nom_usuario %></td>
+                    <td><%= usuario.ema_usuario %></td>
+                    <td><%= usuario.end_usuario %></td>
+                    <td><%= usuario.sen_usuario %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <h2>Produtos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Imagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% produtos.forEach(produto => { %>
+                <tr>
+                    <td><%= produto.id_produto %></td>
+                    <td><%= produto.nom_produto %></td>
+                    <td>R$ <%= produto.val_produto %></td>
+                    <td><%= produto.qtd_produto %></td>
+                    <td><img src="<%= produto.img_produto %>" alt="<%= produto.nom_produto %>"></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

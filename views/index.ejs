@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somemmer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#catalog">Cátalogo</a></li>
+                <li><a href="#cta">Consultoria</a></li>
+                <li><a href="#about">Serviços</a></li>
+            </ul>
+        </nav>
+        <div class="header-action">
+             
+            <a href="/login" class="btn">Login</a>
+            <a href="#cadastro" class="btn">Cadastro</a>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="aside">
+            <div class="logo">
+                <img src="./images/assets/logotypography.png" alt="">
+            </div>
+            <div class="texts">
+                <h1>Transforme Seus Momentos com <span>Drinks Incríveis!</span></h1>
+                <p>Descubra a Arte da Mixologia com a Somemmer - Consultoria e Vendas de Drinks Personalizados para Todas as Ocasiões!</p>
+            </div>
+            <div id="CtaButton">
+                <a href="#">Agende Sua Consultoria</a>
+            </div>
+        </div>
+    </section>
+    <div class="ticker-wrapper">
+        <div class="ticker">
+            <div class="ticker-content">
+                <img src="images/ticker.png" alt="Logos">
+                <img src="images/ticker.png" alt="Logos duplicada">
+            </div>
+        </div>
+        <div class="ticker-gradient ticker-gradient-left"></div>
+        <div class="ticker-gradient ticker-gradient-right"></div>
+    </div>
+
+    <section id="catalog">
+        <div class="header-catalog">
+            <img src="images/assets/arrow-down.png" alt="arrow down">
+            <img src="./images/assets/catalogo-title.png" alt="catalogo de bebidas">    
+        </div>
+        <div class="highlight-title">
+            <h1>Bebidas em Destaque</h1>
+            <img src="images/assets/star.png" alt="">
+        </div>
+        <!-- Contêiner principal para os produtos -->
+        
+        <div id="gallery-drinks">
+            <% produtos.forEach(produto => { %> 
+                <div class="drink-box">
+                    <img id="testante" src="<%= produto.img_produto %>" alt="<%= produto.nom_produto %>">
+                    <span><%= produto.nom_produto %></span>
+                    <span><%= produto.val_produto %></span>
+                    <input type="radio" name="drink" value="<%= produto.id_produto %>">
+                </div>
+            <% }); %>
+        </div>
+    </section>
+    
+<!--     
+    <section id="catalog">
+        <div class="header-catalog">
+            <img src="images/assets/arrow-down.png" alt="arrow down">
+            <img src="./images/assets/catalogo-title.png" alt="catalogo de bebidas">    
+        </div>
+        <div class="highlight-title">
+            <h1>Bebidas em Destaque</h1>
+            <img src="images/assets/star.png" alt="">
+        </div>
+        <% produtos.forEach(produto => { %> 
+        <div id="gallery-drinks">
+            <div class="drink-box">
+                <img id= "testante" src="<%= produto.img_produto %>" alt="">
+                <img src="" alt="">
+                <span></span>
+                <input type="radio">
+                <input type="button">
+            </div>
+        </div>
+        <% }); %> -->
+ 
+        <!--
+            <div class="drink-box">
+                <img src="" alt="">
+                <img src="" alt="">
+                <span></span>
+                <input type="radio">
+                <input type="button">
+            </div>
+            <div class="drink-box">
+                <img src="" alt="">
+                <img src="" alt="">
+                <span></span>
+                <input type="radio">
+                <input type="button">
+            </div>
+            <div class="drink-box">
+                <img src="" alt="">
+                <img src="" alt="">
+                <span></span>
+                <input type="radio">
+                <input type="button">
+            </div>
+            <div class="drink-box">
+                <img src="" alt="">
+                <img src="" alt="">
+                <span></span>
+                <input type="radio">
+                <input type="button">
+            </div>
+            <div class="drink-box">
+                <img src="" alt="">
+                <img src="" alt="">
+                <span></span>
+                <input type="radio">
+                <input type="button">
+            </div>
+            <div class="drink-box">
+                <img src="" alt="">
+                <img src="" alt="">
+                <span></span>
+                <input type="radio">
+                <input type="button">
+            </div>
+        </div> -->
+    </section>
+    <section id="about">
+        <div class="about-title">
+            <h1>Saiba mais sobre <br>nossa <span>Consultoria</span></h1>
+        </div>
+        <div class="cards">
+            <div class="card-box">
+                <img src="./images/icons/last section/agendamento-icon.png" alt="">
+            <div class="card-text">
+                <h3>
+                    Agende para seus eventos
+                </h3>
+                <p>
+                    Agende nossa consultoria e tenha a seleção perfeita de bebidas. Nossos especialistas ajudam você a escolher os drinks ideais, garantindo que todos aproveitem. Relaxe e curta seu evento!
+                </p>
+            </div>
+            </div>
+            <div class="card-box">
+                <img src="./images/icons/last section/menu-icon.png" alt="">
+            <div class="card-text">
+                <h3>
+                    Crie um menu de drinks exclusivo!
+                </h3>
+                <p>
+                    Cada evento é único, e nossa consultoria oferece um menu de bebidas personalizado. Desde coquetéis clássicos a criações inovadoras, tornamos cada gole especial. Impressione seus convidados com drinks que contam a sua história!
+                </p>
+            </div>
+            </div>
+            <div class="card-box">
+                <img src="./images/icons/last section/apoio-icon.png" alt="">
+            <div class="card-text">
+                <h3>
+                    100% de Apoio
+                </h3>
+                <p>
+                    Confuso com tantas opções de bebidas? Nossa equipe simplifica o processo! Oferecemos consultoria desde a seleção até a quantidade ideal para seus convidados. Com nosso suporte, seu evento será um sucesso, com drinks que agradam a todos!
+                </p>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section id="cta">
+        <h1>Pronto para elevar seu evento?
+        </h1>
+        <p>Agende sua consultoria de drinks hoje mesmo e transforme sua festa em uma experiência inesquecível!</p>
+    </section>
+
+    
+</body>
+</html>
+

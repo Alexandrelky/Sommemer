@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Somemmer</title>
+    <link rel="stylesheet" href="/css/login.css"> <!-- Adicione seu CSS aqui -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="login-section">
+        <div class="login-box">
+            <h2>Login</h2>
+            <!-- Formulário de login -->
+            <form action="login" method="POST">
+                <div class="input-group">
+                    <!-- <label for="name">Nome:</label>
+                    <input type="name" id="nome" name="nome" required placeholder="Digite seu nome"> -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu email">
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn">Entrar</button>
+                    <p>Não tem uma conta? <a href="/cadastro">Cadastre-se aqui</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
