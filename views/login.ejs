@@ -3,40 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Somemmer</title>
-    <link rel="stylesheet" href="/css/login.css"> <!-- Adicione seu CSS aqui -->
+    <title>Sommemer - Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="shortcut icon" href="../../images/logos/logo.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Serviços</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="login-section">
-        <div class="login-box">
-            <h2>Login</h2>
-            <!-- Formulário de login -->
-            <form action="login" method="POST">
-                <div class="input-group">
-                    <!-- <label for="name">Nome:</label>
-                    <input type="name" id="nome" name="nome" required placeholder="Digite seu nome"> -->
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Digite seu email">
-                </div>
-                <div class="input-group">
-                    <label for="password">Senha:</label>
-                    <input type="password" id="password" name="password" required placeholder="Digite sua senha">
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="btn">Entrar</button>
-                    <p>Não tem uma conta? <a href="/cadastro">Cadastre-se aqui</a></p>
-                </div>
-            </form>
+    <main>
+        <div class="aside">
+            <div class="logo">
+                <a href="/"><img src="/images/assets/arrow-left.png" alt="" srcset=""></a>
+            </div>
+            <div class="title">
+                <h1>Ninguem tá puro.</h1>
+            </div>
         </div>
-    </section>
+        <div class="other-side">
+            <div class="adv">
+                <span>Ao continuar, afirmo que concordo com a Política de privacidade e os Termos de uso da America Imports.</span>
+            </div>
+            <div class="main-container">
+                <h1>Login</h1>
+                    <form id="loginForm" action="/valida" method="post">
+                    <br>
+                    <input type="email" id="email" placeholder="Insira seu email." name="email" required>
+                    <br>
+                    <input type="password" placeholder="Insira sua Senha." id="senha" name="password" required>
+                    <br>
+                    <input type="submit" value="ENTRAR">
+                </form>
+            </div>
+            <div class="signup">
+                <a href="/cadastro">Não tenho Cadastro.</a>
+            </div>
+            <div class="footer-logo">
+                <img src="../../images/logos/america-logo.png" width="100px" alt="" srcset="">
+            </div>
+        </div>
+    </main>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

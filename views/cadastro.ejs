@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sommemer - Cadastro</title>
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="shortcut icon" href="/images/assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div class="aside">
+            <div class="logo">
+                <a href="/"><img src="/images/assets/arrow-left.png" alt="Logo"></a>
+            </div>
+        </div>
+        
+        <div class="other-side">
+            <div class="adv">
+                <span>Ao continuar, afirmo que concordo com a Política de privacidade e os Termos de uso do Somemmer</span>
+            </div>
+            <div class="main-container">
+                <h1>Cadastro</h1>
+
+                <% if (typeof error !== 'undefined') { %>
+                    <div class="error-message">
+                        <p><%= error %></p>
+                    </div>
+                <% } %>
+
+                <form id="formulario" action="/submit" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Insira seu Nome.">
+                
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="Insira seu E-mail.">
+                
+                    <label for="text">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" required placeholder="Insira seu Endereço">
+                    
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required placeholder="Senha.">
+                
+                    <label for="confirmar_senha">Confirmar Senha:</label>
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" required placeholder="Confirmar Senha">
+                
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+            <div class="footer-logo">
+                <img src="../../images/logos/america-logo.png" width="100px" alt="">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

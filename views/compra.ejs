@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Produto</title>
+    <link rel="stylesheet" href="/css/compra.css">
+</head>
+<body>
+    <header>
+        <h1>Finalizar Compra</h1>
+        <div class="logo">
+            <a href="/"><img src="/images/icons/casa.png" alt="" srcset=""></a>
+        </div>
+    </header>
+    <main>
+        <div class="product-details">
+            <img src="<%= produto.img_produto %>" alt="<%= produto.nom_produto %>">
+            <h2><%= produto.nom_produto %></h2>
+            <p>Preço: R$ <%= parseFloat(produto.val_produto).toFixed(2) %></p>
+            <p>Quantidade disponível: <%= produto.qtd_produto %></p>
+        </div>
+        
+        <form action="/finalizar-compra" method="POST">
+            <input type="hidden" name="id_produto" value="<%= produto.id_produto %>">
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" min="1" max="<%= produto.qtd_produto %>" required>
+            
+            <label for="tipo-pagamento">Tipo de pagamento:</label>
+            <select id="tipo-pagamento" name="tipo_pagamento" required>
+                <option value="cartao_credito">Cartão de Crédito</option>
+                <option value="boleto">Boleto</option>
+                <option value="pix">Pix</option>
+            </select>
+
+            <button type="submit">Finalizar Compra</button>
+        </form>
+    </main>
+</body>
+</html>

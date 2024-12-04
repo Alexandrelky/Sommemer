@@ -1,0 +1,211 @@
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #121212;
+    color: #f6f4f4;
+    text-align: center;
+    padding: 20px;
+    
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #cc0000c8;
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    border-radius: 5px;
+    align-items: center;
+    height: 60px;
+    
+}
+h1 {
+    margin: 0;
+}
+form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #cc000000;
+    box-shadow: #660000;
+    background-color: rgba(255, 255, 255, 0.326);
+    display: inline-block;
+    text-align: left;
+    border-radius: 5px;
+    align-items: center;
+    margin-left: 18%;
+}
+img{
+  width: 200px;   
+}
+.input-group {
+    margin-bottom: 15px;
+    margin-left: 100px;
+    border-radius: 5px;
+}
+.input-group label {
+    margin-right: 10px;
+}
+.beverages {
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.beverage {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #cc0000;
+    background-color:  rgba(255, 255, 255, 0.326);
+    padding: 10px;
+    width: 200px;
+    height: 400px;
+    text-align: center;
+    border-radius: 5px;
+}
+.beverage img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo{
+    width: 50vw;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+.logo img{
+    width: 45px;
+    height: 50px;
+    margin-left: 65%;
+}
+
+#consultoria{
+    padding-left: 40%;
+} */
+ 
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #121212;
+    color: #f6f4f4;
+    text-align: center;
+    padding: 20px;
+    
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #cc0000c8;
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    border-radius: 5px;
+    align-items: center;
+    height: 60px;
+    
+}
+h1 {
+    margin: 0;
+}
+form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #cc000000;
+    box-shadow: #660000;
+    background-color: rgba(255, 255, 255, 0.326);
+    display: inline-block;
+    text-align: left;
+    border-radius: 5px;
+    align-items: center;
+    margin-left: 18%;
+}
+img{
+  width: 200px;   
+}
+.input-group {
+    margin-bottom: 15px;
+    margin-left: 100px;
+    border-radius: 5px;
+}
+.input-group label {
+    margin-right: 10px;
+}
+.beverages {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha, se necessário */
+    gap: 16px; /* Espaço entre os itens */
+    justify-content: center; /*  Centraliza os itens no contêiner   */
+    font-size: .6rem;
+    font-size: 12px;
+    color: rgba(250, 235, 215, 0.825);
+    margin-top: 70px;
+}
+
+.beverage:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    opacity: .6;
+   
+}
+
+.beverage .image img{
+    width: 40px;
+    position: relative;
+    opacity: .1;
+    cursor: pointer;
+}
+.beverage {
+display: flex;
+flex-direction: column; /* Empilha os elementos dentro da caixa */
+align-items: center; /* Centraliza os elementos dentro da caixa */
+padding: 16px;
+border: 1px solid #cf10166b;
+border-radius: 8px;
+background-color: #a5141400;
+width: 200px; /* Define uma largura fixa */
+box-shadow: 0 2px 5px rgb(201, 185, 185);
+text-align: center;
+}
+
+.beverage img {
+max-width: 100%;
+height: auto;
+margin-bottom: 8px;
+border-radius: 2px;
+}
+
+.beverage span {
+font-size: 1rem;
+color: #131313b5;
+margin-bottom: 8px;
+}
+
+.beverage h1{
+display: flex;
+margin-top: 5px;
+}
+
+
+
+.logo{
+    width: 50vw;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+.logo img{
+    width: 45px;
+    height: 50px;
+    margin-left: 65%;
+}
+
+#consultoria{
+    padding-left: 40%;
+}

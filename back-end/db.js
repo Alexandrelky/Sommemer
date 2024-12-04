@@ -1,5 +1,4 @@
 const mysql = require('mysql2');
-
 // Função para criar a conexão
 function connection_func() {
     console.log("Conectando...");
@@ -44,7 +43,8 @@ function create_tables(con) {
             nom_produto VARCHAR(50) NOT NULL,
             val_produto DECIMAL(10, 2) NOT NULL,
             qtd_produto INT NOT NULL,
-            img_produto VARCHAR(255) DEFAULT 'https://m.media-amazon.com/images/I/91g9Dvtf+jL.SL1500.jpg',
+            img_produto VARCHAR(255),
+            tipo_produto VARCHAR(50) NOT NULL,
             PRIMARY KEY (id_produto)
         )
     `;
@@ -84,14 +84,14 @@ function insert_user(con, nom_usuario, ema_usuario, end_usuario, sen_usuario) {
 }
 
 // Função para inserir produtos
-function insert_product(con, nom_produto, val_produto, qtd_produto, img_produto) {
+function insert_product(con, nom_produto, val_produto, qtd_produto, img_produto, tipo_produto) {
     console.log("Adicionando produto...");
     const sql_insert_product = `
-        INSERT INTO produtos (nom_produto, val_produto, qtd_produto, img_produto) 
-        VALUES (?, ?, ?, ?)
+        INSERT INTO produtos (nom_produto, val_produto, qtd_produto, img_produto, tipo_produto) 
+        VALUES (?, ?, ?, ?, ?)
     `;
 
-    con.query(sql_insert_product, [nom_produto, val_produto, qtd_produto, img_produto], function (err, result) {
+    con.query(sql_insert_product, [nom_produto, val_produto, qtd_produto, img_produto, tipo_produto], function (err, result) {
         if (err) {
             console.error("Erro ao adicionar produto: ", err);
             return;
@@ -106,3 +106,5 @@ module.exports = {
     insert_user,
     insert_product
 };
+
+connection_func()

@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Iceland&family=Krona+One&display=swap');
 
 *{
@@ -11,34 +11,16 @@
 
 main{
     display: flex;
+    flex-direction: row-reverse;
     width: 100%;
     height: 100vh;
 }
 main .aside{
     width: 50vw;
-    background-image: url(../images/royal-login.jpg);
+    background-image: url(../images/royal-cadastro.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-main .aside .logo{
-    margin: 2% 0 0 2%;
-}
-main .aside .logo img{
-    width: 30%;
-}
-main .aside .title{
-    height: 70%;
-    display: flex;
-    align-items: center;
-}
-main .aside .title h1{
-    margin-left: 12%;
-    margin-top: 850px;
-    font-size: 4rem;
-    max-width: 10%;
-    line-height: 90%;
-    color: #c5191f00;
 }
 main .other-side{
     width: 50vw;
@@ -53,7 +35,7 @@ main .other-side .adv{
     font-size: .5rem;
     max-width: 50%;
     margin-top: 2%;
-    color: #ff2121;
+    color: #FF2146;
     opacity: .4;
 }
 main .other-side .main-container{
@@ -68,42 +50,40 @@ main .other-side .main-container form{
 }
 main .other-side .main-container h1{
     font-size: 2rem;
-    color: #ff2121;
+    color: #FF2146;
 }
 main .other-side .main-container h4{
     font-size: .5rem;
     font-weight: 100;
-    color: #ff2121;
+    color: #FF2146;
 }
 main .other-side .main-container input[type=password], input[type=text], input[type=email]{
     width: 200%;
     height: 50px;
     border-radius: 10px;
-    border: 2px solid #ff2121c8;
+    border: 2px solid #FF2146;;
     color: whitesmoke;
     padding-left: 10px;
     background-color: rgba(0, 0, 0, 0);
     transition: 1s;
 }
 main .other-side .main-container input[type=submit]{
-    width: 120%;
+    width: 100%;
     height: 50px;
-    border: 2px solid #ff2121;
-    color: rgb(8, 8, 8);
-    background-color: #ff2121d5;
+    border: 2px solid #FF2146;
+    color: rgb(0, 0, 0);
+    background-color: #FF2146;
     transition: .5s;
+    margin-top: 10%;
+    font-size: 17px;
 }
 main .other-side .main-container input[type=submit]:hover{
-    color: #FF2146;
+    color: #9EFF00;
     background-color: #131313;
     cursor: pointer;
 }
-.signup a{
-    color: #ff2121;
-    transition: .5s;
-}
-.signup a:hover{
-    opacity: .3;
+label{
+    color: #121212
 }
 @media (max-width: 929px) {
     main .other-side .main-container input[type=password], input[type=text], input[type=email]{
@@ -153,10 +133,21 @@ main .other-side .main-container input[type=submit]:hover{
     }
 }
 
+.error-message {
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 10px;
+    border: 1px solid #cc0000;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
 .logo img{
     width: 5%;
     display: flex;
 } 
-.logo{
- width: 100px;
+.aside .logo{
+    width: 100%;
+    height: 5%;
 } 
+

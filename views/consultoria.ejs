@@ -1,0 +1,136 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/consultoria.css">
+    <title>Consultoria - Sommemer</title>
+</head>
+<body>
+    <header>
+        <h1>Consultoria de Bebidas</h1>
+        <div class="logo">
+            <a href="/"><img src="/casa.png" alt="" srcset=""></a>
+        </div>
+    </header>
+    <form action="/consultoria" method="POST">
+        <div class="input-group">
+            <label>Indique o tipo do evento para que possamos propor as opções de bebidas mais alinhadas ao contexto e à ocasião.</label>
+            <p> </p>
+            <label><input type="radio" name="tipo" value="casual" required>Casual</label>
+            <label><input type="radio" name="tipo" value="social" required>Social</label>
+            <label><input type="radio" name="tipo" value="executivo" required>Executivo </label>
+        </div>
+        <button type="submit">Consultar</button>
+    </form>
+    <% if (bebidas && bebidas.length > 0) { %>
+        <div class="beverages">
+            <% bebidas.forEach(bebida => { %>
+                <div class="beverage">
+                    <h3><%= bebida.nom_produto %></h3>
+                    <img src="<%= bebida.img_produto %>" alt="<%= bebida.nom_produto %>">
+                    <p>Preço: R$ <%= parseFloat(bebida.val_produto).toFixed(2) %></p>
+                    <p>Quantidade: <%= bebida.qtd_produto %> em estoque</p>
+                </div>
+            <% }) %>
+        </div>
+    <% } else if (bebidas) { %>
+        <p>Nenhuma bebida encontrada para este tipo.</p>
+    <% } %>
+</body>
+</html> -->
+
+
+<!--tela que vai ser, ainda sem as modificações malucas
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/consultoria.css">
+    <title>Consultoria - Sommemer</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 id="consultoria">Consultoria de Bebidas ainda</h1>
+        <div class="logo">
+            <a href="/"><img src="/casa.png" alt="" srcset=""></a>
+        </div>
+    </header>
+    <form action="/consultoria" method="POST">
+        <div class="input-group">
+            <label>Indique o tipo do evento para que possamos propor as opções de bebidas mais alinhadas ao contexto e à ocasião.</label>
+            <p> </p>
+            <label><input type="radio" name="tipo" value="social" required>Casual</label>
+            <label><input type="radio" name="tipo" value="executivo" required>Social</label>
+            <label><input type="radio" name="tipo" value="bagunça" required>Executivo </label>
+        </div>
+        <button type="submit">Consultar</button>
+    </form>
+    <% if (bebidas && bebidas.length > 0) { %>
+        <div class="beverages">
+            <% bebidas.forEach(bebida => { %>
+                <div class="beverage">
+                     <img src="<%= bebida.img_produto %>" alt="<%= bebida.nom_produto %>">
+                     <h3><%= bebida.nom_produto %></h3>
+                    <p>Preço: R$ <%= parseFloat(bebida.val_produto).toFixed(2) %></p>
+                    <p>Quantidade: <%= bebida.qtd_produto %> em estoque</p>
+                </div>
+            <% }) %>
+        </div>
+    <% } else if (bebidas) { %>
+        <p>Nenhuma bebida encontrada para este tipo.</p>
+    <% } %>
+</body>
+</html>
+
+ -->
+
+
+
+
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/consultoria.css">
+    <title>Consultoria - Sommemer</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 id="consultoria">Consultoria de Bebidas ainda</h1>
+        <div class="logo">
+            <a href="/"><img src="/casa.png" alt="" srcset=""></a>
+        </div>
+    </header>
+    <form action="/consultoria" method="POST">
+        <div class="input-group">
+            <label>Indique o tipo do evento para que possamos propor as opções de bebidas mais alinhadas ao contexto e à ocasião.</label>
+            <p> </p>
+            <label><input type="radio" name="tipo" value="casual" required>Casual</label>
+            <label><input type="radio" name="tipo" value="social" required>Social</label>
+            <label><input type="radio" name="tipo" value="executivo" required>Executivo </label>
+        </div>
+        <button type="submit">Consultar</button>
+    </form>
+    <% if (bebidas && bebidas.length > 0) { %>
+        <div class="beverages">
+            <% bebidas.forEach(bebida => { %>
+                <div class="beverage">
+                    <a href="/compra/<%= bebida.id_produto %>">
+                        <img id="testante" src="<%= bebida.img_produto %>" alt="<%= bebida.nom_produto %>">
+                    </a>
+                     <h3><%= bebida.nom_produto %></h3>
+                    <p>Preço: R$ <%= parseFloat(bebida.val_produto).toFixed(2) %></p>
+                    <p>Quantidade: <%= bebida.qtd_produto %> em estoque</p>
+                </div>
+            <% }) %>
+        </div>
+    <% } else if (bebidas) { %>
+        <p>Nenhuma bebida encontrada para este tipo.</p>
+    <% } %>
+</body>
+</html>

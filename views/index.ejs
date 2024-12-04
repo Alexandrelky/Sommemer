@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somemmer</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/images/assets/favicon.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="#catalog">Cátalogo</a></li>
-                <li><a href="#cta">Consultoria</a></li>
+                <li><a href="/consultoria">Consultoria</a></li>
                 <li><a href="#about">Serviços</a></li>
             </ul>
         </nav>
         <div class="header-action">
              
             <a href="/login" class="btn">Login</a>
-            <a href="#cadastro" class="btn">Cadastro</a>
+            <a href="/cadastro" class="btn">Cadastro</a>
         </div>
     </header>
     <section id="hero">
@@ -52,89 +53,25 @@
             <img src="./images/assets/catalogo-title.png" alt="catalogo de bebidas">    
         </div>
         <div class="highlight-title">
-            <h1>Bebidas em Destaque</h1>
+            <h1>Bebidas</h1>
             <img src="images/assets/star.png" alt="">
         </div>
-        <!-- Contêiner principal para os produtos -->
         
-        <div id="gallery-drinks">
-            <% produtos.forEach(produto => { %> 
-                <div class="drink-box">
-                    <img id="testante" src="<%= produto.img_produto %>" alt="<%= produto.nom_produto %>">
-                    <span><%= produto.nom_produto %></span>
-                    <span><%= produto.val_produto %></span>
-                    <input type="radio" name="drink" value="<%= produto.id_produto %>">
-                </div>
-            <% }); %>
-        </div>
+        <form action="/compra" method="post"> 
+            <div id="gallery-drinks">
+                <% produtos.forEach(produto => { %>
+                    <a href="/compra/<%= produto.id_produto %>">
+                    <div class="drink-box">
+                            <img id="testante" src="<%= produto.img_produto %>" alt="<%= produto.nom_produto %>">
+                        <h1><%= produto.nom_produto %> <br></h1>
+                        <h3>R$ <%= produto.val_produto %></h3>
+                    </a>
+                    </div>
+                <% }); %>
+            </div>
+            
+    </form>
     </section>
-    
-<!--     
-    <section id="catalog">
-        <div class="header-catalog">
-            <img src="images/assets/arrow-down.png" alt="arrow down">
-            <img src="./images/assets/catalogo-title.png" alt="catalogo de bebidas">    
-        </div>
-        <div class="highlight-title">
-            <h1>Bebidas em Destaque</h1>
-            <img src="images/assets/star.png" alt="">
-        </div>
-        <% produtos.forEach(produto => { %> 
-        <div id="gallery-drinks">
-            <div class="drink-box">
-                <img id= "testante" src="<%= produto.img_produto %>" alt="">
-                <img src="" alt="">
-                <span></span>
-                <input type="radio">
-                <input type="button">
-            </div>
-        </div>
-        <% }); %> -->
- 
-        <!--
-            <div class="drink-box">
-                <img src="" alt="">
-                <img src="" alt="">
-                <span></span>
-                <input type="radio">
-                <input type="button">
-            </div>
-            <div class="drink-box">
-                <img src="" alt="">
-                <img src="" alt="">
-                <span></span>
-                <input type="radio">
-                <input type="button">
-            </div>
-            <div class="drink-box">
-                <img src="" alt="">
-                <img src="" alt="">
-                <span></span>
-                <input type="radio">
-                <input type="button">
-            </div>
-            <div class="drink-box">
-                <img src="" alt="">
-                <img src="" alt="">
-                <span></span>
-                <input type="radio">
-                <input type="button">
-            </div>
-            <div class="drink-box">
-                <img src="" alt="">
-                <img src="" alt="">
-                <span></span>
-                <input type="radio">
-                <input type="button">
-            </div>
-            <div class="drink-box">
-                <img src="" alt="">
-                <img src="" alt="">
-                <span></span>
-                <input type="radio">
-                <input type="button">
-            </div>
-        </div> -->
     </section>
     <section id="about">
         <div class="about-title">
