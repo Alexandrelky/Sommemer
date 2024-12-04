@@ -117,7 +117,7 @@ form {
     padding: 20px;
     border: 2px solid #cc000000;
     box-shadow: #660000;
-    background-color: rgba(255, 255, 255, 0.326);
+    background-color: rgba(138, 134, 134, 0.326);
     display: inline-block;
     text-align: left;
     border-radius: 5px;
@@ -129,7 +129,7 @@ img{
 }
 .input-group {
     margin-bottom: 15px;
-    margin-left: 100px;
+    margin-left: 10px;
     border-radius: 5px;
 }
 .input-group label {
@@ -208,4 +208,8 @@ margin-top: 5px;
 
 #consultoria{
     padding-left: 40%;
+}
+
+#formante{
+    margin-right: 200px;
 }

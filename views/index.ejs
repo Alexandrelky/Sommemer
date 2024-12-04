@@ -16,11 +16,24 @@
                 <li><a href="#about">Serviços</a></li>
             </ul>
         </nav>
+<!-- 
         <div class="header-action">
              
             <a href="/login" class="btn">Login</a>
             <a href="/cadastro" class="btn">Cadastro</a>
+        </div> -->
+       
+       
+        <div class="header-action">
+            <% if (user) { %>
+                <span>Olá, <%= user.nome %>!</span>
+                <a href="/logout" class="btn">Logout</a>
+            <% } else { %>
+                <a href="/login" class="btn">Login</a>
+                <a href="/cadastro" class="btn">Cadastro</a>
+            <% } %>
         </div>
+
     </header>
     <section id="hero">
         <div class="aside">

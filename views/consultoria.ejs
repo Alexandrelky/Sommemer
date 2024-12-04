@@ -101,19 +101,66 @@
 </head>
 <body>
     <header>
-        <h1 id="consultoria">Consultoria de Bebidas ainda</h1>
+    
+        <h1 id="consultoria">Bem vindo á Consultoria do Sommemer</h1>
         <div class="logo">
             <a href="/"><img src="/casa.png" alt="" srcset=""></a>
         </div>
     </header>
-    <form action="/consultoria" method="POST">
+    <form action="/consulta" method="POST" id="formante">
         <div class="input-group">
-            <label>Indique o tipo do evento para que possamos propor as opções de bebidas mais alinhadas ao contexto e à ocasião.</label>
+            <!-- <label>Indique o tipo do evento para que possamos propor as opções de bebidas mais alinhadas ao contexto e à ocasião.</label>
             <p> </p>
             <label><input type="radio" name="tipo" value="casual" required>Casual</label>
             <label><input type="radio" name="tipo" value="social" required>Social</label>
-            <label><input type="radio" name="tipo" value="executivo" required>Executivo </label>
-        </div>
+            <label><input type="radio" name="tipo" value="executivo" required>Executivo </label> -->
+
+            <label id="informe">Informe as caracteristicas do evento para que possamos propor as opções de bebidas mais alinhadas ao contexto e à ocasião.</label>
+            <p> </p>
+                <label for="tipo">Evento: </label>
+                <select name="tipo_produto" id="tipo" required>
+                    <option value="" disabled selected>Tipo de evento</option>
+                    <option value="casual">Casual</option>
+                    <option value="social">Social</option>
+                    <option value="executivo">Exclusivo</option>
+                </select>
+                <br><br>
+               <span>Dia ou noite?</span> 
+               <label><input type="radio" name="horario" value="dia" required>Dia &nbsp; <input type="radio" name="horario" value="noite" required>Noite</label>
+                <br><br>
+                <!-- ai -->
+               <span>Preferência de bebida?</span> 
+               <label><input type="radio" name="lugar_bebida" value="local" required>Local &nbsp; <input type="radio" name="lugar_bebida" value="importado" required>importada</label>
+               <br><br>
+               <!-- ai -->
+               <span>Busca algo para relaxar ou animar o evento?</span> 
+               <label><input type="radio" name="busca_oq" value="relaxar" required>Relaxar &nbsp; <input type="radio" name="busca_oq" value="animar" required>Animar</label>
+               <br><br>
+               <!-- ai -->
+               <span>Qual a temperatura da bebida desejada?</span> 
+               <label><input type="radio" name="temperatura" value="gelada" required>Gelada &nbsp; <input type="radio" name="temperatura" value="quente" required>Quente</label>
+                 <!-- ai -->
+                 <br><br>
+               <span>Você prefere bebida doce ou seca?</span> 
+               <label><input type="radio" name="sabor_bebida" value="doce" required>Doce &nbsp; <input type="radio" name="sabor_bebida" value="seco" required>Seca</label>
+                 <!-- ai -->
+                 <br><br>
+               <span>Sabor do álcool:</span> 
+               <label><input type="radio" name="sabor_alcool" value="leve" required>Leve &nbsp; <input type="radio" name="sabor_alcool" value="forte" required>Forte</label>
+                <!-- ai -->
+                <br><br>
+                <span>Opções econômicas ou Premium?</span> 
+                <label><input type="radio" name="opcao_preco" value="economicas" required>Econômicas &nbsp; <input type="radio" name="opcao_preco" value="premium" required>Premium</label>
+                 <!-- ai -->
+                 <br><br>
+               <span>Gosta de drinks temáticos?</span> 
+               <label><input type="radio" name="drink_tema" value="sim" required>Sim &nbsp; <input type="radio" name="drink_tema" value="nao" required>Não</label>
+             <!-- ai -->
+             <br><br>
+             <span>Deseja experimentar combinações exóticas de sabores?</span> 
+             <label><input type="radio" name="combinacoes_bebida" value="sim" required>Sim &nbsp; <input type="radio" name="combinacoes_bebida" value="nao" required>Não</label>
+            </div>
+        
         <button type="submit">Consultar</button>
     </form>
     <% if (bebidas && bebidas.length > 0) { %>
@@ -133,4 +180,4 @@
         <p>Nenhuma bebida encontrada para este tipo.</p>
     <% } %>
 </body>
-</html>
+</html> 

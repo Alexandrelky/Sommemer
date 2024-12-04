@@ -45,6 +45,15 @@ function create_tables(con) {
             qtd_produto INT NOT NULL,
             img_produto VARCHAR(255),
             tipo_produto VARCHAR(50) NOT NULL,
+            horario VARCHAR(10),
+            lugar_bebida VARCHAR(20),
+            busca_oq VARCHAR(20),
+            temperatura VARCHAR(10),
+            sabor_bebida VARCHAR(10),
+            sabor_alcool VARCHAR(10),
+            opcao_preco VARCHAR(10),
+            drink_tema VARCHAR(10),
+            combinacoes_bebida VARCHAR(10),
             PRIMARY KEY (id_produto)
         )
     `;
@@ -82,16 +91,31 @@ function insert_user(con, nom_usuario, ema_usuario, end_usuario, sen_usuario) {
         console.log("Usuário adicionado com sucesso!");
     });
 }
+// horario VARCHAR(10),
+// lugar_bebida VARCHAR(20),
+// busca_oq VARCHAR(20),
+// temperatura VARCHAR(10),
+// sabor_bebida VARCHAR(10),
+// sabor_alcool VARCHAR(10),
+// opcao_preco VARCHAR(10),
+// drink_tema VARCHAR(10),
+// combinacoes_bebida VARCHAR(10),
+// PRIMARY KEY (id_produto)
+
+
+
+
+
 
 // Função para inserir produtos
-function insert_product(con, nom_produto, val_produto, qtd_produto, img_produto, tipo_produto) {
+function insert_product(con, nom_produto, val_produto, qtd_produto, img_produto, tipo_produto,horario, lugar_bebida, busca_oq, temperatura, sabor_bebida, sabor_alcool, opcao_preco,drink_tema, combinacoes_bebida) {
     console.log("Adicionando produto...");
     const sql_insert_product = `
-        INSERT INTO produtos (nom_produto, val_produto, qtd_produto, img_produto, tipo_produto) 
-        VALUES (?, ?, ?, ?, ?)
+        INSERT INTO produtos (nom_produto, val_produto, qtd_produto, img_produto, tipo_produto,horario, lugar_bebida, busca_oq, temperatura, sabor_bebida, sabor_alcool, opcao_preco,drink_tema, combinacoes_bebida) 
+        VALUES (?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
 
-    con.query(sql_insert_product, [nom_produto, val_produto, qtd_produto, img_produto, tipo_produto], function (err, result) {
+    con.query(sql_insert_product, [nom_produto, val_produto, qtd_produto, img_produto, tipo_produto, horario, lugar_bebida, busca_oq, temperatura, sabor_bebida, sabor_alcool, opcao_preco,drink_tema, combinacoes_bebida], function (err, result) {
         if (err) {
             console.error("Erro ao adicionar produto: ", err);
             return;
